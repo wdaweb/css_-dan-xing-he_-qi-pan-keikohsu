@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            display: flex;
+            justify-content: center;
+           
+           align-items: center;
+           
+        }
+.box{
+    width: 750px;
+    height:800px;
+    background: white;
+    border:1px solid  #000 ;
+    position: relative;
+   
+}
+
+td{
+    border: solid  #000 1px;
+    width: auto;
+    height:70px;
+}
+.table{
+    width: 600px;
+    height:300px;
+    position: absolute;
+    border-spacing: 0;
+    top:80px;
+   }
+   /* 上叉叉的線 */
+.table::before{
+    content: '';
+    width: 200px;
+    transform: rotate(-45deg);
+            height: 1px;
+            border-top: solid black 1px;
+        position: absolute;
+        top:75px;
+        left: 199px;
+}
+.table::after{
+    content: '';
+    width: 200px;
+    transform: rotate(45deg);
+            height: 1px;
+            border-top: solid black 1px;
+        position: absolute;
+        top:75px;
+        left: 201px;
+     
+}
+/* 下叉叉的線 */
+.line{
+    width: 200px;
+    transform: rotate(-45deg);
+            height: 1px;
+            border-top: solid black 1px;
+        position: absolute;
+        bottom:76px;
+        left: 204px;
+}
+.line::before{
+    content: '';
+    width: 210px;
+    transform: rotate(90deg);
+            height: 1px;
+            border-top: solid black 1px;
+        position: absolute;
+        left: -11px;
+       
+     
+}
+
+/* 第一排 車馬象將士 */
+.position{
+position: absolute;
+top: -30px;
+
+}
+.car{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:-30px;
+}
+.car::before{
+    content: '';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+p.a {
+  
+    color:red;
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+p.b{
+    color: black;
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+}
+.car2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:-30px;
+
+z-index: 99;
+}
+.car2::before{
+    content: '';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.horse{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:45px;
+}
+
+.horse2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:45px;
+}
+
+.xiang{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:120px;
+}
+
+.xiang2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:120px;
+}
+
+.si{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:195px;
+z-index: 99;
+}
+
+.si2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:195px;
+}
+
+.king{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:270px;
+}
+
+.bore{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:45px;
+}
+.bore::before{
+    content: '包';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.boreRed2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left:45px;
+}
+.boreRed2::before{
+    content: '炮';
+    color: red;
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.bore2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:45px;
+}
+.bore2::before{
+    content: '包';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.boreRed{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right:45px;
+}
+.boreRed::before{
+    content: '炮';
+    color: red;
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.small5{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right: -30px;
+}
+.small5::before{
+    content: '卒';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.small4{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+right: 118px;
+}
+.small4::before{
+    content: '卒';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.small3{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left: 270px;
+}
+.small3::before{
+    content: '卒';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.small2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left: 120px;
+}
+.small2::before{
+    content: '卒';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+.small1{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+left: -30px;
+}
+.small1::before{
+    content: '卒';
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+
+.smallRed2{
+    width: 60px;
+height: 60px;
+    border-radius: 50%;
+border: 1px solid #000;
+background: white;
+position: absolute;
+
+
+
+
+}
+.smallRed2::before{
+    content: '兵';
+    color: red;
+    font-size: 40px;
+    font-family: '標楷體';
+    top:5px;
+    left: 9px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+
+}
+
+.text{
+    font-size: 45px;
+    font-family: '標楷體';
+position: absolute;
+top: 260px;
+left: 100px;
+}
+.text1{
+    font-size: 45px;
+    font-family: '標楷體';
+position: absolute;
+top: 260px;
+right: 100px;
+}
+
+.boxText{
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
+  width: 2px;
+  height: 800px;
+position: relative;
+ 
+}
+/* 垂直的字 */
+.T1{
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 770px;
+    font-size: 30px;
+    letter-spacing: 7px;
+    font-family: '標楷體';
+
+}
+.T2{
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 10px;
+    font-size: 30px;
+    letter-spacing: 7px;
+    font-family: '標楷體';
+
+}
+
+    </style>
+</head>
+<body>
+   
+<table class="table">
+<div class="box">
+<tr>
+<td> <div class=" position car"><p class="b">車</p></div></td>
+<td><div class=" position horse"><p class="b">馬</p></div></td>
+<td><div class=" position xiang"><p class="b">象</p></div></td>
+<td><div class=" position si"><p class="b">士</p></div></td>
+<td><div class=" position king"><p class="b">將</p></div></td>
+<td><div class=" position si2"><p class="b">士</p></div></td>
+<td><div class=" position xiang2"><p class="b">象</p></div></td>
+<td><div class=" position horse2"><p class="b">馬</p></div><div class=" position car2"><p class="b">車</p></div></td>
+
+</tr>
+
+<tr class="c">
+    <td></td>
+    <td><div class=" bore"></div></td>
+    <td ></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><div class=" bore2"></div></td>
+    <td></td>
+    </tr>
+
+    <tr>
+        <td><div class=" small1"></div></td>
+        <td><div class=" small2"></div></td>
+        <td><div class=" small3"></div></td>
+        <td><div class=" small4"></div></td>
+        <td><div class=" small5"></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="8"><p class="text">楚河</p> <p class="text1">漢界</p> </td>
+                </tr>
+                
+                <tr>
+                    <td><div class="smallRed2" style="left:-30px;"></div></td>
+                    <td><div class=" smallRed2"style="left:120px;"></div></td>
+                    <td><div class=" smallRed2"style="left:270px;"></div></td>
+                    <td><div class=" smallRed2" style="right:118px;"></div></td>
+                    <td><div class=" smallRed2" style="right:-30px;"></div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><div class=" boreRed"></div></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><div class=" boreRed2"></div></td>
+                        <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><div class="line"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                                <td> <div class="car"><p class="a">俥</p></div></td>
+                                <td><div class=" horse"><p class="a">傌</p></div></td>
+                                <td><div class=" xiang" ><p class="a">相</p></div></td>
+                                <td><div class="si"><p class="a">仕</p></div></td>
+                                <td><div class="king"><p class="a">帥</p></div></td>
+                                <td><div class=" si2"><p class="a">仕</p></div></td>
+                                <td><div class="xiang2"><p class="a">相</p></div></td>
+                                <td><div class="horse2"><p class="a">傌</p></div><div class=" car2"><p class="a">俥</p></div></td>
+                                </tr>
+                                
+</table>
+<div class="boxText">
+<p class="T1">棋盤裡，車無輪馬無韁，叫聲將軍提防提防</p>
+<p class="T2">圖畫裡，龍不吟虎不嘯，小小書僮可笑可笑</p>
+</div>
+
+
+</div>
+
+   
+</body>
+</html>
